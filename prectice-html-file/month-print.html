@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Month</title>
+</head>
+<body>
+    <h2>Print Months</h2>
+
+    <label> Input Year Digit
+        <input type="text" maxlength="2" id="yearNumber"> = 
+    </label>
+    <label id="output"></label>
+    <br><br>
+    <button type="button" onclick="yearName()">Click</button>
+
+    <script>
+        function yearName() {
+            let a = document.getElementById("yearNumber").value * 1;
+            let b;
+
+            if( a == 1) {
+                b = "January"
+            }
+
+            else if( a == 2) {
+                b = "February"
+            }
+
+            else if( a == 3) {
+                b = "March"
+            }
+
+            else if( a == 4) {
+                b = "April"
+            }
+
+            else if( a == 5) {
+                b = "May"
+            }
+
+            else if( a == 6) {
+                b = "June"
+            }
+
+            else if( a == 7) {
+                b = "July"
+            }
+
+            else if( a == 8) {
+                b = "August"
+            }
+
+            else if( a == 9) {
+                b = "september"
+            }
+
+            else if( a == 10) {
+                b = "October"
+            }
+
+            else if( a == 11) {
+                b = "November"
+            }
+
+            else if( a == 12) {
+                b = "December"
+            }
+            else {
+                b = "Wrong Input"
+            }
+
+            document.getElementById("output").innerHTML = b;
+        }
+    </script>
+</body>
+</html>

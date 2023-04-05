@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Greatest Value</title>
+</head>
+
+<body>
+    <h2>Second Greatest Value</h2>
+
+    <label for="input">
+        <input type="number" id="fv">
+    </label>
+    <label for="input">
+        <input type="number" id="sv">
+    </label>
+    <label for="input">
+        <input type="number" id="tv"> =
+    </label>
+    <label id="largest-value"></label>
+    <br><br>
+    <button id="click-button" onclick="result()">Click</button>
+
+    <script>
+        function result(firstDigit = document.getElementById("fv").value * 1, secondDigit = document.getElementById("sv").value * 1, thirdDigit = document.getElementById("tv").value * 1,) {
+            //let firstDigit = document.getElementById("fv").value * 1;
+            //let secondDigit = document.getElementById("sv").value * 1;
+            //let thirdDigit = document.getElementById("tv").value * 1;
+            if (firstDigit > secondDigit && firstDigit > thirdDigit) {
+                if (secondDigit > thirdDigit) {
+                    console.log(secondDigit);
+                    document.getElementById("largest-value").innerHTML = secondDigit;
+                }
+                console.log(thirdDigit);
+                document.getElementById("largest-value").innerHTML = thirdDigit;
+            }
+            else if (secondDigit > firstDigit && secondDigit > thirdDigit) {
+                if (firstDigit > thirdDigit) {
+                    console.log(firstDigit);
+                    document.getElementById("largest-value").innerHTML = firstDigit;
+                }
+                console.log(thirdDigit);
+                document.getElementById("largest-value").innerHTML = thirdDigit;
+            }
+            else if (thirdDigit > firstDigit && thirdDigit > secondDigit) {
+                if (firstDigit > secondDigit) {
+                    console.log(firstDigit);
+                    document.getElementById("largest-value").innerHTML = firstDigit;
+                }
+                console.log(secondDigit);
+                document.getElementById("largest-value").innerHTML = secondDigit;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

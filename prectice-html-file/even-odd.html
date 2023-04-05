@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd</title>
+</head>
+<body>
+    <h2>Even or Odd</h2>
+
+    <label>Putt Number
+        <input id="number" type="number">
+    </label> = 
+    <label id="output"></label>
+    <br><br>
+    <button type="button" onclick="evenodd()">Click</button>
+
+    <script>
+        function evenodd() {
+            let a = document.getElementById('number').value;
+            let b; 
+            if(a % 2 == 0) {
+               b = 'this is even number'
+            }
+            if(a % 2 != 0) {
+                b = 'this is odd number'
+            }
+
+            document.getElementById('output').innerHTML = b;
+        }
+    </script>
+</body>
+</html>

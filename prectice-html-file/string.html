@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+
+<body>
+    <h1>String Methods</h1>
+
+    
+
+    <label>
+        <p id="output"></p>
+    </label>
+
+    <script>
+        //let a = "abcdefghijklmnopqrstuvwxyz";
+        //document.getElementById("output").innerHTML = a.length;
+    
+        //let a = "We are the so-called "Vikings" from the North."
+        //let a = "We are the so-called 'Vikings' from the North."
+        //let a = 'We are the so-called "Vikings" from the North.'
+        //let a = "We are the so-called \"Vikings\" from the North."
+
+        //let a = 'It\'s alright.';
+
+        //let a = "The character \\ is called backslash";
+        //document.getElementById("output").innerHTML = a;
+
+        //document.getElementById("output").innerHTML = "Radhey \Jhorar!"
+
+            /*The safest way to break a code line in a string is using string addition.*/
+        //document.getElementById("output").innerHTML = "Radhey " + "    Jhorar!";
+
+            /*You cannot break a code line with a \ backslash.*/
+        //document.getElementById("output").innerHTML = \"Radhey jhorar.";
+
+        
+        //let x = "Radhey";//x is a string
+        //let y = new String("Jhorar");//y is an object
+        //document.getElementById("output").innerHTML = typeof x + "<br>" + typeof y;
+
+        //let x = "Radhey";//x is a string
+        //let y = new String("Radhey");//y is an object
+        //document.getElementById("output").innerHTML = (x==y); //When using the == operator, x and y are equal:
+        //document.getElementById("output").innerHTML = (x===y); //When using the === operator, x and y are not equal:
+
+        
+           //Note the difference between (x==y) and (x===y).
+           //Never Create Strings as Objects
+           //JavaScript objects cannot be compared.
+           // True or False ?
+
+        //let x = new String("Radhey"); //x is an object
+        //let y = new String("Radhey"); //y is an object
+        //document.getElementById("output").innerHTML = (x===y);
+            //Comparing two JavaScript objects always returns false.
+    </script>
+
+
+
+    
+
+    <label for="output">
+        <p id="output2"></p>
+    </label>
+
+        
+    <script>   
+            //The slice() Method
+        //let a = "Apple, Banana, Kiwi";
+        //let b = a.slice(14,19);
+        //document.getElementById("output2").innerHTML = b;
+
+
+        //let a = "Apple, Banana, Kiwi";
+        //let b = a.slice(6);
+        //document.getElementById("output2").innerHTML = b;
+
+        //let a = "Apple, Banana, Kiwi";
+        //let b = a.slice(-19);
+        //document.getElementById("output2").innerHTML = b;
+
+        //let a = "Apple, Banana, Kiwi ";
+        //let b = a.slice(-20, -1);
+        //document.getElementById("output2").innerHTML = b;
+
+              //substring()
+              //substring() is similar to slice().
+        //let a = "Apple, Banana, Kiwi ";
+        //let b = a.substring(0,19);
+        //document.getElementById("output2").innerHTML = b;
+
+
+                //substr()
+                //substr() is similar to slice().
+        //let a = "Apple, Banana, Kiwi";
+        //let b = a.substr(-19); //(0); //(0,19);
+        //document.getElementById("output2").innerHTML = b;
+
+    </script>
+
+
+    <h3>Replacing String Content</h3>
+
+    <label for="text">
+        <p id="text">Please visit Microsoft Please visit Microsoft Please visit Microsoft Please visit Microsoft</p>
+    </label>
+    <button id="button" onclick="replace()">Try It</button>
+
+    <script>
+        function replace() {
+        let a = document.getElementById("text").innerHTML;
+        //let b = a.replace("Microsoft","Jhorar-Farm-House");
+              //To replace case insensitive, use a regular expression with an /i flag (insensitive):
+        //let b = a.replace(/MICROSOFT/i,"Jhorar-Farm-House");
+               //To replace all matches, use a regular expression with a /g flag (global match):
+        //let b = a.replace(/Microsoft/g,"Jhorar Farm House");
+
+               //ReplaceAll()
+        //a = a.replaceAll(/Microsoft/g, "Google") //("Microsoft","Google")
+        //a = a.replaceAll(/visit/g, "go") //("visit", "go")
+        //document.getElementById("text").innerHTML = a;
+
+                //Convert string to upper case:
+        //document.getElementById("text").innerHTML = a.toUpperCase();
+
+                //Convert string to lower case:
+        document.getElementById("text").innerHTML = a.toLowerCase();
+        }
+    </script>
+
+
+    <h3>JavaScript String concat()</h3>
+
+    <label for="output">
+        <p id="result"></p>
+    </label>
+
+    <script>
+               //The concat() method joins two or more strings:
+        let a = "Hello";
+        let b = "World!";
+        let c = a.concat(" ", b);
+        document.getElementById('result').innerHTML = c;
+
+    </script>
+
+
+    <h3>The trim() Method</h3>
+
+    <label for="output">
+    <p id="result1"></p>
+    </label>
+
+    <script>
+                //The trim() method removes whitespace from both sides of a string:
+        let x = "        Hello World!                                           ";
+        let y = x.trim();
+        document.getElementById('result1').innerHTML = "Length x = " + x.length + "<br> Length y = " + y.length + "<br>" + x + y;
+
+    </script>
+
+
+
+
+</body>
+
+</html>

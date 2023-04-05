@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Number table</title>
+</head>
+
+<body>
+    <h2>Input Number table</h2>
+
+    <label>
+        <input type="number" id="tablevalue">
+    </label>
+    <br>
+    <button type="button" onclick="button()">Click</button>
+    <br>
+    <div id="printv"></div>
+
+
+    <script>
+         function button() {
+            /*let firstv = document.getElementById("tablevalue").value * 1;
+            let secondv = 1;
+            let result = document.createElement("h2");
+           while (secondv <= 10) {
+                //console.log(firstv * secondv)
+
+                result.innerHTML += firstv * secondv + "<br>";
+                document.getElementById("printv").appendChild(result);
+                secondv += 1;
+            }*/
+            let result = document.createElement("div");
+            let secondv = 1;
+            for (firstv = document.getElementById("tablevalue").value * 1;  secondv <= 10; secondv += 1) {
+                
+                result.innerHTML += firstv * secondv + "<br>";
+                document.getElementById("printv").appendChild(result);
+                console.log(firstv * secondv);
+                
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Array Elements</title>
+</head>
+<body>
+    <h2>Adding Array Elements</h2>
+    <input id="input" type="text">
+    <button onclick="addElement()">Add</button>
+    <p id="output"></p>
+    <p id="output2"></p>
+
+    <script>
+        const fruits = ["Banana","Orange","Apple"];
+        fruits[6] = "Lemon";
+        let text = "";
+        for (i = 0; i < fruits.length; i++) {
+            //text = text + fruits[i] + "<br>";
+            text += fruits[i] + "<br>";
+        }
+        document.getElementById("output2").innerHTML = text;
+
+        function addElement() {
+            //fruits.push("Lemon");
+            fruits[fruits.length] = document.getElementById("input").value;
+            document.getElementById("output").innerHTML = fruits;
+        }
+    </script>
+</body>
+</html>

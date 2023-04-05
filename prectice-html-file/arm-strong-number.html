@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arm Strong Number</title>
+</head>
+
+<body>
+    <h2>Arm Strong Number</h2>
+
+    <label for="input">
+        <input type="number" id="input-value"> =
+        
+    </label>
+    <label id="print-value"></label>
+    <br>
+    <button type="button" onclick="printResult()">Click</button>
+
+    <script>
+        function printResult() {
+            let inputDigit = document.getElementById("input-value").value * 1;
+            let secondDigit = 0;
+            let thirdDigit = 0;
+            let fourthDigit = inputDigit;
+            let noOfGigit = inputDigit.toString().length
+            while (inputDigit > 0) {
+                secondDigit = inputDigit % 10;
+                thirdDigit += secondDigit ** noOfGigit;
+                inputDigit = parseInt(inputDigit / 10);
+
+                if (thirdDigit == fourthDigit) {
+                    console.log("This is Arm Number");
+                    document.getElementById("print-value").innerHTML = "This is Arm Number";
+                }
+                else {
+                    console.log("No, This is Not Arm Number");
+                    document.getElementById("print-value").innerHTML = "No, This is Not Arm Number";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

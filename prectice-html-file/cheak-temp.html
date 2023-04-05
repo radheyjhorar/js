@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheak Temperature</title>
+    <style>
+        #output {
+            margin: 0;
+            padding: 0;
+            height: 12px;
+            width: 20%;
+            border: 2px solid black;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Cheak Temperature</h2>
+
+    <select>
+        <option value="freeze">Freeze</option>
+        <option value="verycold">Very Cold</option>
+        <option value="cold">Cold</option>
+        <option value="littlecold">Little Cold</option>
+        <option value="normal">Normal</option>
+        <option value="littleheat">Little Heat</option>
+        <option value="Heat">Heat</option>
+        <option value="veryheat">Very heat</option>
+        <option value="boil">Boil</option>
+    </select><br> <br>
+    <label> Putt Value =
+        <input type="text" maxlength="3" size="5" id="tempereture"> =
+    </label>
+    <label id="output"></label>
+    <br>
+    <button type="button" onclick="temp()">Click</button>
+
+    <script>
+
+        function temp() {
+            let a = document.getElementById("tempereture").value * 1;
+            let b;
+
+            if (a == 0) {
+                b = "Freez"
+            }
+            else if (a >= 1 && a <= 5) {
+                b = "Very Cold"
+            }
+            else if (a >= 6 && a <= 15) {
+                b = "Cold"
+            }
+            else if (a >= 16 && a <= 25) {
+                b = "Little Cold"
+            }
+            else if (a >= 26 && a <= 30) {
+                b = "Normal"
+            }
+            else if (a >= 31 && a <= 40) {
+                b = "Lettle Heat "
+            }
+            else if (a >= 41 && a <= 50) {
+                b = "Heat"
+            }
+            else if (a >= 51 && a <= 99) {
+                b = "Very Heat"
+            }
+            else if (a == 100) {
+                b = "Boil"
+            }
+            else {
+                b = "Wrong Value"
+            }
+            document.getElementById("output").innerHTML = b;
+        }
+    </script>
+</body>
+
+</html>

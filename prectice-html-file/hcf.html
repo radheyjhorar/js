@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCF</title>
+</head>
+<body>
+    <h2>HCF</h2>
+
+    <label for="input">
+        <input type="number" id="fv">
+    </label>
+    <label for="input">
+        <input type="number" id="sv">=
+    </label>
+    <label id="largest-value"></label>
+    <br><br>
+    <button id="click-button" onclick="result()">Click</button>
+
+    <script>
+        function result() {
+            let firstDigit = document.getElementById("fv").value * 1;
+            let secondDigit = document.getElementById("sv").value * 1;
+            let q;
+            let r;
+            while (firstDigit >= secondDigit) {
+                if ((q = firstDigit / secondDigit) && (r = firstDigit % secondDigit) == 1) {
+                    console.log(secondDigit);
+                    document.getElementById("largest-value").innerHTML = secondDigit;
+                }
+                
+                
+            }
+        }
+    </script>
+</body>
+</html>

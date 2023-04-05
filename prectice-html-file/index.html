@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Practice</title>
+</head>
+
+<body>
+    <h1>JavaScript Use = for</h1>
+
+    <div id="output"></div>
+
+    <script>
+        //Looping Array Elements
+        //using a for loop
+        const customers = ["ravi", "pawan", "shirvi", "popat"];
+        let clen = customers.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < clen; i++) {
+            //text = text + "<li>" + customers[i] + "</li>";
+            text += "<li>" + customers[i] + "</li>";
+        }
+        //text = text + "</ul>";
+        text += "</ul>";
+
+        console.log(text)
+        document.getElementById("output").innerHTML = text;
+
+    </script>
+</body>
+
+</html>

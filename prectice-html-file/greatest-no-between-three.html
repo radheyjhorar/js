@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest Number Etween Three</title>
+</head>
+<body>
+    <h2>Greatest Number Etween Three</h2>
+
+    <label for="input">
+        <input type="number" id="fv">
+    </label>
+    <label for="input">
+        <input type="number" id="sv">
+    </label>
+    <label for="input">
+        <input type="number" id="tv"> = 
+    </label>
+    <label id="largest-value"></label>
+    <br><br>
+    <button id="click-button" onclick="result()">Click</button>
+
+    <script>
+        function result() {
+            let firstDigit = document.getElementById("fv").value * 1;
+            let secondDigit = document.getElementById("sv").value * 1;
+            let thirdDigit = document.getElementById("tv").value * 1;
+            if (firstDigit > secondDigit && firstDigit > thirdDigit) {
+                console.log(firstDigit);
+                document.getElementById("largest-value").innerHTML = "firstDigit";
+            }
+            else if (secondDigit > firstDigit && secondDigit > thirdDigit) {
+                console.log(secondDigit);
+                document.getElementById("largest-value").innerHTML = "secondDigit";
+            }
+            else if (thirdDigit > firstDigit && thirdDigit > secondDigit) {
+                console.log(thirdDigit);
+                document.getElementById("largest-value").innerHTML = thirdDigit;
+            }
+
+        }
+    </script>
+
+</body>
+</html>

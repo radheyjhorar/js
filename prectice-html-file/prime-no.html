@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+
+<body>
+    <input type="number" name="putt-value" id="putt-value">
+    <label for="result" id="print-result"></label>
+    <button type="button" onclick="printResult()">Click</button>
+    <script>
+        function printResult() {
+            let inputDigit = document.getElementById("putt-value").value * 1;
+            let secondDigit = 2;
+            let thirdDigit = parseInt(inputDigit / 2);
+            let fourthDigit = true;
+            while (secondDigit <= thirdDigit) {
+                if (inputDigit % secondDigit == 0) {
+                    fourthDigit = false;
+                    break;
+                }
+                secondDigit = secondDigit + 1;
+            }
+            if (fourthDigit == true) {
+                console.log("Prime Number")
+            }
+            else {
+                console.log("Not Prime Number")
+            }
+        }
+    </script>
+</body>
+
+</html>
