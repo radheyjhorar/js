@@ -41,3 +41,71 @@ console.log(text.startsWith("P"));
 console.log(text.endsWith("Please"));
 console.log(text.endsWith("!"));
 
+
+let radhey = `Hello Sir "How are 'You'"`;
+let literals = `The quick
+brown fox
+jumps over
+the lazy dog`;
+console.log(literals);
+
+let fname = "Radhey";
+let lname = "Jhorar";
+let wlcm = `Hello "${fname} ${lname}" Welcome`;
+console.log(wlcm);
+
+let price = 10;
+let vat = 1.25;
+let total = `Total: ${(price * (2 + vat)).toFixed(2)}`;
+
+console.log(total);
+
+let header = "Radhey Jhorar";
+let tags = ["Collage Student", "9518852747", "Ellenabad"];
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+    html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+
+console.log(html);
+
+
+let x = 123e5;
+let y = 123e-4;
+console.log(x + " " + y);
+
+let a = 0.2 + 0.1;
+let b = (0.2*10 + 0.1*10) / 10;
+console.log("0.2 + 0.1 = " + a);
+console.log("0.2 + 0.1 = " + b);
+
+var xa = 10;
+var ya = 20;
+console.log("The result is: " + `${xa + ya}`);
+
+console.log(100 / "Apple");
+console.log(100 / "10");
+let n = 100 / "Apple" 
+console.log(isNaN(n));
+
+let na = NaN;
+let no = 5;
+console.log(na + no);
+
+let ty = NaN;
+console.log(typeof(ty));
+
+let mn = 2;
+let txt = "   ";
+while (mn != Infinity) {
+    mn *= mn;
+    txt += mn;
+}
+console.log(txt);
+
+let xi = 2/0;
+let yi = -2/0;
+console.log(xi + " " + yi);
+
+console.log(typeof(Infinity));
