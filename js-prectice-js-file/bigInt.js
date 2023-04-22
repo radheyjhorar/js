@@ -89,3 +89,108 @@ let ll = 123;
 console.log(ll.valueOf());
 console.log((123).valueOf());
 console.log((100 + 23).valueOf());
+
+
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number("10"));
+console.log(Number("  10"));
+console.log(Number("10  "));
+console.log(Number("  10  "));
+console.log(Number("10.33"));
+console.log(Number("10,33"));
+console.log(Number("10 33"));
+console.log(Number("John"));
+
+
+console.log(parseInt("-10"));
+console.log(parseInt("-10.33"));
+console.log(parseInt("10"));
+console.log(parseInt("10.33"));
+console.log(parseInt("10 6"));
+console.log(parseInt("10 years"));
+console.log(parseInt("years 10"));
+
+
+console.log("-------------")
+
+console.log(parseFloat("10"));
+console.log(parseFloat("10.33"));
+console.log(parseFloat("10 6"));
+console.log(parseFloat("10 years"));
+console.log(parseFloat("years 10"));
+console.log(parseFloat("years10"));
+
+
+
+console.log("-------------")
+
+console.log(Number.isInteger(10));
+console.log(Number.isInteger(10.5));
+console.log(Number.isSafeInteger(10));
+console.log(Number.isSafeInteger(12345678901234567890));
+
+
+
+console.log("-------------")
+
+console.log(Number.parseFloat("10"));
+console.log(Number.parseFloat("10.33"));
+console.log(Number.parseFloat("10 20 30"));
+console.log(Number.parseFloat("10 years"));
+console.log(Number.parseFloat("years 10")); 
+
+
+
+console.log("-------------")
+
+console.log(Number.parseInt("-10"));
+console.log(Number.parseInt("-10.33"));
+console.log(Number.parseInt("10.33"));
+console.log(Number.parseInt("10 6"));
+console.log(Number.parseInt("10 years"));
+console.log(Number.parseInt("years 10"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let a = 2;
+let b = 2;
+let isprime = true;
+
+while (b < a) {
+    if(a % b == 0){
+        isprime = false;
+        break;
+    }
+    b = b + 1;
+};
+
+if (isprime == true){
+    isprime = true;
+};
+
+console.log(isprime);
+
+
+
+
+
+
+
+
