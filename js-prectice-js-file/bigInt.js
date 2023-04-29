@@ -151,22 +151,7 @@ console.log(Number.parseInt("10 6"));
 console.log(Number.parseInt("10 years"));
 console.log(Number.parseInt("years 10"));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("-------------")
 
 
 let a = 2;
@@ -187,6 +172,13 @@ if (isprime == true){
 
 console.log(isprime);
 
+
+console.log("-------------")
+
+
+
+let o = Number.EPSILON;
+console.log(o);
 
 
 
