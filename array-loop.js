@@ -34,11 +34,26 @@
 // console.log(a);
 
 //Array filter method
-let arr2 = [45, 23, 21, 0, 3, 5]
-let a2 = arr2.filter((value)=>{
-    return value < 10
-});
-console.log(a2)
+// let arr2 = [45, 23, 21, 0, 3, 5]
+// let a2 = arr2.filter((value)=>{
+//     return value < 10
+// });
+// console.log(a2)
+
+
+//Array reduce method
+// let arr3 = [1, 2, 3, 5, 2, 1]
+// const reduce_func = (h1, h2) => {
+//     return h1 + h2
+// }
+// let a3 = arr3.reduce(reduce_func)
+// console.log(a3)
+
+
+
+let arr = [1, 2, 3, 4, 5, 6, 83]
+let a = prompt("Enter a number")
+a = Number.parseInt(a)
 
 
 
